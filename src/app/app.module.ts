@@ -10,6 +10,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { ContentComponent } from './content/content.component';
+=======
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { ContentComponent } from './content/content.component';
     FooterComponent,
     HeaderComponent,
     ContentComponent
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
