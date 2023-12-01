@@ -7,15 +7,32 @@ import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
 import { RegisterComponent } from './register/register.component';
 import { MahasiswaComponent } from './mahasiswa/mahasiswa.component';
+import { otentikasiGuard } from './otentikasi.guard';
 
 const routes: Routes = [
   { path: 'admin', component: AdminComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'dashboard2', component: Dashboard2Component },
-  { path: 'dashboard3', component: Dashboard3Component },
-  { path: 'mahasiswa', component: MahasiswaComponent },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    canActivate: [otentikasiGuard],
+  },
+  {
+    path: 'dashboard2',
+    component: Dashboard2Component,
+    canActivate: [otentikasiGuard],
+  },
+  {
+    path: 'dashboard3',
+    component: Dashboard3Component,
+    canActivate: [otentikasiGuard],
+  },
+  {
+    path: 'mahasiswa',
+    component: MahasiswaComponent,
+    canActivate: [otentikasiGuard],
+  },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
 ];
 
