@@ -16,7 +16,6 @@
             "outputPath": "dist/angular212102432",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "baseHref": "src/angular212102432",
             "polyfills": [
               "zone.js"
             ],
